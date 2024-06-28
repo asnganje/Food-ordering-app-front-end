@@ -1,2 +1,2 @@
 # React + Vite for Zomato Full Stack App
-A full stack application resembling the zomato app. Built using mERN technologies.
+A full stack food ordering application. Built using MERN technologies.

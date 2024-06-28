@@ -1,15 +1,26 @@
-import { useSelector } from "react-redux"
-import { Landing } from "./pages";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { 
+        Landing,
+        HomeLayout,
+        Error,
+        Register,
+        Login
+        } from "./pages";
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Landing />
+  },
+  {
+    path: '/login',
+    element: <Login />
+  }
+])
 
 function App() {
-
-  const user = useSelector((store)=>store.user)
-  console.log(user);
   return (
-    <div className="text-blue-300">
-      App
-      <Landing />
-    </div>
+    <RouterProvider router={router}/>
   )
 }
 export default App
