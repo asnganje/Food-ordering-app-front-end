@@ -6,9 +6,14 @@ const initialState = {
 }
 
 const userSlice = createSlice({
-  name: 'user slice',
+  name: 'user',
   initialState,
-  reducers: {}
+  reducers: {
+    logoutUser: (state)=> {
+      state.name=null
+    }
+  }
 })
 
 export const userReducer = userSlice.reducer
+export const {logoutUser} = userSlice.actions
