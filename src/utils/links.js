@@ -1,7 +1,7 @@
 export const links = [
-    {href:"/", label: 'home'},
-    {href:"about", label: 'about'},
-    {href:"foods", label: 'foods'},
-    {href:"hotels", label: 'hotels'},
-    {href:"cities", label: 'cities'},
+    {href:"/", label: 'Home'},
+    {href:"about", label: 'About'},
+    {href:"foods", label: 'Foods'},
+    {href:"hotels", label: 'Hotels'},
+    {href:"cities", label: 'Cities'},
 ]

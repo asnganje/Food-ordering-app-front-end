@@ -11,7 +11,7 @@ function Navbar() {
             <Logo />
             <LinksDropdown />
             <NavLinks />
-            <div className="flex justify-center items-center gap-x-4">
+            <div className="hidden md:flex justify-center items-center gap-x-4">
                 <ModeToggle />
                 <HotelButton />
             </div>
