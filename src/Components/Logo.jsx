@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
-import { Bed } from "lucide-react"
+import food3 from '../assets/food3.png'
 
 function Logo() {
   return (
-    <Link to="/" className="hidden md:flex justify-center items-center bg-logoBgColor p-2 rounded-lg text-white">
-        <Bed className="w-8 h-8"/>      
+    <Link to="/" className="hidden md:flex justify-center items-center bg-transparent p-2 rounded-lg text-white">
+        <img src={food3} alt="food2" className="w-20 h-14 rounded-2xl text-orange-500" />
     </Link>
   )
 }
