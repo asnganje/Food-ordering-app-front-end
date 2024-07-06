@@ -27,4 +27,13 @@ const loginUser = createAsyncThunk('user/loginUser', async (user)=> {
   }
 })
 
-export {createUser, loginUser}
+const logoutUser = createAsyncThunk('user/logoutUser', async () => {
+  const url = `${userUrl}/logout`;
+  try {
+      await axios.post(url);
+  } catch (error) {
+      throw new Error(`Could not log out user due to ${error}`);
+  }
+});
+
+export { createUser, loginUser, logoutUser };
