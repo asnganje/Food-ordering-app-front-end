@@ -23,7 +23,7 @@ function NavLinks() {
             return( <NavLink to={link.href} key={link.label} 
 
                           className={({isActive})=> {
-                            return `hover:underline font-serif font-light ${isActive? 'text-blue-700' : 'text-gray-500'}`
+                            return `hover:underline font-serif font-light ${isActive? 'text-orange-500' : 'text-gray-500'}`
                          }}
                          onClick={hideDropdownMenu}
                         >
