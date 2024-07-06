@@ -1,26 +1,32 @@
-import { useDispatch, useSelector } from "react-redux"
+
+import { Link } from "react-router-dom";
 import Button from "./ui/Button";
-import { logoutUser } from "../redux/slices/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUser } from "../redux/thunks/userThunk";
 
 function Header() {
-    const user = useSelector((store)=>store.user)
+    const state = useSelector((store)=>store.user)
+    const {user} = state
     const dispatch = useDispatch()
-    const {name} = user
     const handleLogout = () => {
-        dispatch(logoutUser())
+            dispatch(logoutUser())
     }
   return (
     <header>
         <div className="align-element flex justify-center sm:justify-end py-2">
             {
-                name?
+                user?
                 <div className="flex gap-x-2 sm:gap-x-8 items-center">
-                    <p className="text-xs sm:text-sm">Hello, {name}</p>
+                    <p className="text-xs sm:text-sm">Hello, {user.data.lastName}</p>
                     <Button btnName="Logout" handleClick = {handleLogout}/>
                 </div>:
                 <div className="flex gap-x-6 justify-center items-center -mr-4">
-                    <Button btnName="Sign in/Guest User"/>
-                    <Button btnName="Register"/>
+                    <Button btnName="Sign in">
+                        <Link to='/login'>Sign in</Link>
+                    </Button>
+                    <Button btnName="Register">
+                        <Link to='/register'>Register</Link>
+                    </Button>
                 </div>
             }
         </div>
