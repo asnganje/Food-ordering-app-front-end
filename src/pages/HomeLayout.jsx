@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 function HomeLayout() {
   const {isVisible} = useSelector((store)=>store.menu)
   return (
-    <div>
+    <main className="bg-[url(src/assets/bg.png)] bg-cover min-h-[60vh]">
       <Header />
       <Navbar />
       <>
@@ -16,7 +16,7 @@ function HomeLayout() {
       </div>
       }
       </>
-    </div>
+    </main>
   )
 }
 export default HomeLayout
