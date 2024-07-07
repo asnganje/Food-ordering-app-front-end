@@ -5,7 +5,11 @@ import {
         Error,
         Register,
         Login,
-        About
+        About,
+        Cart,
+        Products,
+        Checkout,
+        Orders
         } from "./pages";
 
 const router = createBrowserRouter([
@@ -21,6 +25,22 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />
+      },
+      {
+        path: 'products',
+        element: <Products />
+      },
+      {
+        path: 'cart',
+        element: <Cart />
+      },
+      {
+        path: 'checkout',
+        element: <Checkout />
+      },
+      {
+        path: 'orders',
+        element: <Orders />
       }
     ]
   },
