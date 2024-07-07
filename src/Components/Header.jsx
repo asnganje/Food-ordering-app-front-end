@@ -17,7 +17,7 @@ function Header() {
             {
                 user?
                 <div className="flex gap-x-2 sm:gap-x-8 items-center">
-                    <p className="font-serif text-xl">Hello, {user.data.lastName}</p>
+                    <p className="font-serif text-2xl font-bold text-white">Hello, {user.data.lastName}</p>
                     <Button btnName="Logout" handleClick = {handleLogout}/>
                 </div>:
                 <div className="flex gap-x-6 justify-center items-center -mr-4">
