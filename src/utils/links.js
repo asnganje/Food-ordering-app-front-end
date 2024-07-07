@@ -1,7 +1,8 @@
 export const links = [
     {href:"/", label: 'Home'},
     {href:"about", label: 'About'},
-    {href:"foods", label: 'Foods'},
-    {href:"hotels", label: 'Hotels'},
-    {href:"cities", label: 'Cities'},
+    {href:"products", label: 'Products'},
+    {href:"cart", label: 'Cart'},
+    {href:"checkout", label: 'Checkout'},
+    {href:"orders", label: 'Orders'},
 ]
