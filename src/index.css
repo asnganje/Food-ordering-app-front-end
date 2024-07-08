@@ -7,3 +7,7 @@
         @apply mx-auto max-w-6xl px-8
     }
 }
+
+.bg-Img {
+    background-image: url('src/assets/bg.png');
+}
