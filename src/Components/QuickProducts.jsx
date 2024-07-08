@@ -2,7 +2,7 @@ import { quickProducts } from "../utils/qProducts"
 
 function QuickProducts() {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 py-6">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-[5vh] pb-[20vh]">
       {quickProducts.map((product)=> {
         const { id, meal, label, description} = product
         return (
