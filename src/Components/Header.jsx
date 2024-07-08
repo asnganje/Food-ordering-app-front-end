@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Button from "./ui/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../redux/thunks/userThunk";
@@ -7,6 +7,11 @@ import { logoutUser } from "../redux/thunks/userThunk";
 function Header() {
     const state = useSelector((store)=>store.user)
     const {user} = state
+
+    const location = useLocation();
+
+    const changeColor = location.pathname !== '/'
+
     const dispatch = useDispatch()
     const handleLogout = () => {
             dispatch(logoutUser())
@@ -17,7 +22,7 @@ function Header() {
             {
                 user?
                 <div className="flex gap-x-2 sm:gap-x-8 items-center">
-                    <p className="font-serif text-2xl font-bold text-white">Hello, {user.data.lastName}</p>
+                    <p className={`${changeColor? 'text-orange-500': 'text-white'} font-serif text-2xl font-bold `}>Hello, {user.data.lastName}</p>
                     <Button btnName="Logout" handleClick = {handleLogout}/>
                 </div>:
                 <div className="flex gap-x-6 justify-center items-center -mr-4">
